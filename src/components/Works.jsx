@@ -34,20 +34,18 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full flex"
-      whileHover={{ scale: 1.03 }} // ✅ Smooth zoom on hover
-      transition={{ type: "spring", stiffness: 200, damping: 12 }}
+      className="w-full h-full" // ✅ width fix
     >
       <SafeTilt
-        tiltMaxAngleX={15}
-        tiltMaxAngleY={15}
+        tiltMaxAngleX={25}
+        tiltMaxAngleY={25}
         scale={1}
         transitionSpeed={450}
-        className="bg-tertiary p-5 rounded-2xl w-full flex flex-col h-full shadow-md hover:shadow-xl transition-shadow duration-300"
+        className="bg-tertiary p-5 rounded-2xl h-full flex flex-col" // ✅ no fixed sm:w-[90%]
       >
         {/* Image Section */}
         <div
-          className="w-full h-[220px] sm:h-[230px] relative cursor-pointer overflow-hidden rounded-2xl"
+          className="w-full h-[220px] sm:h-[230px] relative cursor-pointer"
           onClick={() =>
             live_website_link && window.open(live_website_link, "_blank")
           }
@@ -60,14 +58,14 @@ const ProjectCard = ({
             }
             alt={name || "project"}
             loading="lazy"
-            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-cover rounded-2xl"
           />
 
           <div className="absolute inset-0 flex justify-end mt-3 card-img_hover">
             {source_code_link && (
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
+                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
               >
                 <img
                   src={githubIcon}
@@ -108,7 +106,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <div className="overflow-x-hidden"> {/* ✅ Prevent horizontal scroll */}
       {/* Heading */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Things I’ve Built </p>
@@ -136,14 +134,15 @@ const Works = () => {
         </motion.div>
       </div>
 
-      {/* ✅ Equal Height Grid + Mobile Gap */}
-      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-7 items-stretch">
+      {/* ✅ Responsive Grid with vertical gap */}
+      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-8 items-stretch">
         {projects?.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} index={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
+
 
 export default SectionWrapper(Works, "projects");
