@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 z-20 bg-[#050a208e] fixed`}
+      className={`${styles.paddingX} w-full flex items-center py-2 z-20 bg-[#050a208e] fixed overflow-x-hidden`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -25,7 +25,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {/* Logo from public/assets */}
+          {/* Logo */}
           <img
             src="/assets/logo.png"
             alt="logo"
@@ -40,7 +40,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="list-none hidden text-nowrap sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-6">
           {navLinks.map((link) => (
             <li
               key={link.id}
