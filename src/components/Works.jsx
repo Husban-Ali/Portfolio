@@ -3,10 +3,24 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "./SectionWrapper";
 
 const githubIcon =
   "https://cdn-icons-png.flaticon.com/512/733/733553.png";
+
+// ✅ SafeTilt (desktop only)
+const SafeTilt = ({ children, ...props }) => {
+  return (
+    <>
+      {/* Desktop → Tilt */}
+      <div className="hidden sm:block w-full h-full">
+        <Tilt {...props}>{children}</Tilt>
+      </div>
+      {/* Mobile → Simple div */}
+      <div className="block sm:hidden w-full h-full">{children}</div>
+    </>
+  );
+};
 
 const ProjectCard = ({
   index,
@@ -20,61 +34,74 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full"
+      className="w-full flex"
+      whileHover={{ scale: 1.03 }} // ✅ Smooth zoom on hover
+      transition={{ type: "spring", stiffness: 200, damping: 12 }}
     >
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col"
+      <SafeTilt
+        tiltMaxAngleX={15}
+        tiltMaxAngleY={15}
+        scale={1}
+        transitionSpeed={450}
+        className="bg-tertiary p-5 rounded-2xl w-full flex flex-col h-full shadow-md hover:shadow-xl transition-shadow duration-300"
       >
         {/* Image Section */}
         <div
-          className="w-full h-[200px] sm:h-[230px] relative cursor-pointer"
-          onClick={() => window.open(live_website_link, "_blank")}
+          className="w-full h-[220px] sm:h-[230px] relative cursor-pointer overflow-hidden rounded-2xl"
+          onClick={() =>
+            live_website_link && window.open(live_website_link, "_blank")
+          }
         >
           <img
-            src={`${image}${image.includes("?") ? "&" : "?"}tr=f-auto`}
-            alt={name}
+            src={
+              image
+                ? `${image}${image.includes("?") ? "&" : "?"}tr=f-auto`
+                : ""
+            }
+            alt={name || "project"}
             loading="lazy"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
           />
 
           <div className="absolute inset-0 flex justify-end mt-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src={githubIcon}
-                alt="GitHub Icon"
-                loading="lazy"
-                className="object-contain w-1/2 h-1/2"
-              />
-            </div>
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
+              >
+                <img
+                  src={githubIcon}
+                  alt="GitHub Icon"
+                  loading="lazy"
+                  className="object-contain w-1/2 h-1/2"
+                />
+              </div>
+            )}
           </div>
         </div>
 
         {/* Content Section */}
         <div className="mt-5 flex flex-col flex-grow">
-          <h3 className="text-white font-bold text-[20px] sm:text-[24px]">
+          <h3 className="text-white font-bold text-[18px] sm:text-[20px] md:text-[24px]">
             {name}
           </h3>
-          <p className="text-secondary mt-4 text-[14px] sm:text-[15px] flex-grow">
+          <p className="text-secondary mt-3 text-[13px] sm:text-[15px] flex-grow leading-relaxed">
             {description}
           </p>
 
           {/* Tags */}
           <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <p
+            {tags?.map((tag) => (
+              <span
                 key={tag.name}
-                className={`${tag.color} text-[13px] sm:text-[15px]`}
+                className={`${tag.color} text-[12px] sm:text-[14px] md:text-[15px]`}
               >
                 #{tag.name}
-              </p>
+              </span>
             ))}
           </div>
         </div>
-      </Tilt>
+      </SafeTilt>
     </motion.div>
   );
 };
@@ -82,34 +109,36 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
+      {/* Heading */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Things I’ve Built </p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
+      {/* Description */}
       <div className="w-full flex">
-        <motion.p
+        <motion.div
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[15px] sm:text-[17px] max-w-3xl sm:leading-[30px] leading-6"
         >
-          <p className="text-gray-400 text-sm sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          <div className="text-gray-400 text-sm sm:text-lg leading-relaxed max-w-3xl mx-auto">
             Here are some of the projects I’ve built using modern web and
             <span className="text-[#FF9900] font-medium"> AWS cloud technologies</span>.
-            From <span className="text-[#FF9900] font-medium">frontend animations</span>
-            to <span className="text-[#FF9900] font-medium">backend logic</span> and
+            From <span className="text-[#FF9900] font-medium">frontend animations</span> to
+            <span className="text-[#FF9900] font-medium"> backend logic</span> and
             <span className="text-[#FF9900] font-medium"> cloud-native deployments</span>,
-            with live demos and source code provided, these works reflect my
-            hands-on experience in building
+            with live demos and source code provided, these works reflect my hands-on
+            experience in building
             <span className="text-[#FF9900] font-medium"> scalable</span>,
             <span className="text-[#FF9900] font-medium"> secure</span>, and
             <span className="text-[#FF9900] font-medium"> maintainable</span> applications.
-          </p>
-        </motion.p>
+          </div>
+        </motion.div>
       </div>
 
-      {/* ✅ Responsive Grid */}
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-        {projects.map((project, index) => (
+      {/* ✅ Equal Height Grid + Mobile Gap */}
+      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-7 items-stretch">
+        {projects?.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} index={index} />
         ))}
       </div>

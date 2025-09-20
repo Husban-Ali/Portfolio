@@ -1,30 +1,10 @@
-import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  freelance,
-  shopify,
-  sheryians,
-  macbookpro,
-  falverra,
-  tripguide,
-  threejs,
-} from "../../public/assets";
+// import {
+//   mongodb,
+//   git,
+ 
+// } from "../../public/assets";
 // Direct path from public folder
+
 const lambda = "/assets/lambda.svg";
 const dynamodb = "/assets/dynamodb.png";
 const CICD = "/assets/CICD.svg";
@@ -43,6 +23,18 @@ const smit = "/assets/smit.png";
 const RH = "/assets/RandH.png";
 const chat = "/assets/Chat.png";
 const FandH = "/assets/FandH.png";
+const javascript =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/javascript.png?updatedAt=1749961104755";
+const reactjs =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/reactjs.png?updatedAt=1749961105057";
+const tailwind =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/tailwind.png?updatedAt=1749961111586";
+const nodejs =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/nodejs.png?updatedAt=1749961104709";
+const mongodb =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/mongodb.png?updatedAt=1749961104590";
+const git =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/tech/git.png?updatedAt=1749961104346";
 
 
 export const navLinks = [
@@ -306,7 +298,7 @@ const projects = [
       { name: "css", color: "pink-text-gradient" },
     ],
     image: stopwatch,
-    source_code_link: "https://github.com/Husban-Ali/stopwatch.gitt",
+    source_code_link: "https://github.com/Husban-Ali/stopwatch.git",
     live_website_link: "",
   },
   {
