@@ -23,25 +23,25 @@ import {
   falverra,
   tripguide,
   threejs,
-} from "../assets";
-import lambda from "../assets/lambda.svg"
-import dynamodb from "../assets/dynamodb.png"
-import CICD from "../assets/CICD.svg"
-import mern from "../assets/mern.png"
-import cloudformation from "../assets/cloudformation.svg"
-import EC2 from "../assets/EC2.svg"
-import image3 from "../assets/image3.png"
-import image4 from "../assets/image4.png"
-import image2 from "../assets/image2.png"
-import airport from "../assets/airport.png"
-import todo from "../assets/react-todo.png"
-import stopwatch from "../assets/stopwatch.png"
-import calculator from "../assets/calculator.png"
-import luxestore from "../assets/luxestore.png"
-import smit from "../assets/smit.png"
-import RH from "../assets/RandH.png"
-import chat from "../assets/Chat.png"
-import FandH from "../assets/FandH.png"
+} from "../../public/assets";
+import lambda from "../../public/assets/lambda.svg"
+import dynamodb from "../../public/assets/dynamodb.png"
+import CICD from "../../public/assets/CICD.svg"
+import mern from "../../public/assets/mern.png"
+import cloudformation from "../../public/assets/cloudformation.svg"
+import EC2 from "../../public/assets/EC2.svg"
+import image3 from "../../public/assets/image3.png"
+import image4 from "../../public/assets/image4.png"
+import image2 from "../../public/assets/image2.png"
+import airport from "../../public/assets/airport.png"
+import todo from "../../public/assets/react-todo.png"
+import stopwatch from "../../public/assets/stopwatch.png"
+import calculator from "../../public/assets/calculator.png"
+import luxestore from "../../public/assets/luxestore.png"
+import smit from "../../public/assets/smit.png"
+import RH from "../../public/assets/RandH.png"
+import chat from "../../public/assets/Chat.png"
+import FandH from "../../public/assets/FandH.png"
 
 export const navLinks = [
   {
