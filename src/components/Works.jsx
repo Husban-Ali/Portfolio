@@ -4,7 +4,10 @@ import { styles } from "../styles";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { github } from "../../public/assets";
+
+// ✅ Use CDN link instead of importing from public
+const github =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/github.png?updatedAt=1750673299882";
 
 const ProjectCard = ({
   index,
@@ -18,7 +21,7 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="flex" // 👈 ensure equal height distribution
+      className="flex"
     >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
@@ -58,7 +61,7 @@ const ProjectCard = ({
             {description}
           </p>
 
-          {/* Tags ko bottom par fix karne ke liye */}
+          {/* Tags Section */}
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
               <p key={tag.name} className={`${tag.color} text-[15px]`}>
@@ -72,14 +75,14 @@ const ProjectCard = ({
   );
 };
 
-
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Things I’ve Built </p>
+        <p className={styles.sectionSubText}>Things I’ve Built</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
+
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
@@ -97,10 +100,11 @@ const Works = () => {
             <span className="text-[#FF9900] font-medium"> secure</span>, and
             <span className="text-[#FF9900] font-medium"> maintainable</span> applications.
           </p>
-
         </motion.p>
       </div>
-      <div className=" mt-20 flex flex-wrap gap-7">
+
+      {/* ✅ Responsive flex layout */}
+      <div className="mt-20 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} index={index} />
         ))}
@@ -109,4 +113,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works,"projects");
+export default SectionWrapper(Works, "projects");
