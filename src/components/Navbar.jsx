@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import {  menu, close } from "../assets";
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -30,7 +31,7 @@ const Navbar = () => {
             height={64}
           />
           <p className="text-white text-[17px] font-semibold cursor-pointer">
-            <span className="sm:block  font-bold">Swastik</span> | Yadav
+            <span className="sm:block  font-bold">HUSBAN</span> 
           </p>
         </Link>
 
@@ -39,7 +40,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-[#ffffff69]"
+                active === link.title ? "text-white" : "text-[#FF9900]"
               } hover:text-[#ffffffac] text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >

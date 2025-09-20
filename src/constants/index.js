@@ -24,6 +24,24 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import lambda from "../assets/lambda.svg"
+import dynamodb from "../assets/dynamodb.png"
+import CICD from "../assets/CICD.svg"
+import mern from "../assets/mern.png"
+import cloudformation from "../assets/cloudformation.svg"
+import EC2 from "../assets/EC2.svg"
+import image3 from "../assets/image3.png"
+import image4 from "../assets/image4.png"
+import image2 from "../assets/image2.png"
+import airport from "../assets/airport.png"
+import todo from "../assets/react-todo.png"
+import stopwatch from "../assets/stopwatch.png"
+import calculator from "../assets/calculator.png"
+import luxestore from "../assets/luxestore.png"
+import smit from "../assets/smit.png"
+import RH from "../assets/RandH.png"
+import chat from "../assets/Chat.png"
+import FandH from "../assets/FandH.png"
 
 export const navLinks = [
   {
@@ -39,6 +57,10 @@ export const navLinks = [
     id: "skills",
     title: "skills",
   },
+  {
+    id: "projects",
+    title: "project",
+  },
 
   {
     id: "contact",
@@ -48,20 +70,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "MERN Stack Development",
+    icon: mern,
   },
   {
-    title: "React Developer",
-    icon: mobile,
+    title: "AWS Serverless ",
+    icon: lambda,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Cloud Databases",
+    icon: dynamodb,
   },
   {
-    title: "MERN Stack",
-    icon: creator,
+    title: "CI/CD & DevOps (CodePipeline, CodeBuild, GitHub Actions)",
+    icon: CICD,
   },
 ];
 
@@ -75,8 +97,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "cloudformation",
+    icon: cloudformation,
   },
   {
     name: "JavaScript",
@@ -89,17 +111,17 @@ const technologies = [
   },
 
   {
-    name: "HTML 5",
-    icon: html,
+    name: "CICD",
+    icon: CICD,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "DynamoDB",
+    icon: dynamodb,
   },
 
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Lambda",
+    icon: lambda,
   },
 
   {
@@ -112,136 +134,193 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "EC2",
+    icon: EC2,
   },
 ];
 
 const experiences = [
   {
-    title: "Freelance Frontend Developer",
-    company_name: "Self-employed",
-    icon: freelance, // Replace with any icon you like
+    title: "Backend Developer Intern",
+    company_name: "SMIT – Saylani Mass And I.T. Training",
+    icon: smit,
     iconBg: "#0188E3",
-    date: "Jan 2023 - Present",
+    date: "Sept 2024 - Oct 2024",
     points: [
-      "Built responsive and interactive web apps using React.js, Tailwind CSS, and GSAP.",
-      "Developed and deployed modern landing pages and portfolio websites for clients.",
-      "Integrated APIs and handled form validation, animations, and smooth scroll effects.",
-      "Delivered pixel-perfect UI designs based on Figma and Adobe XD mockups.",
+      "Selected for a competitive 2-month internship at SMIT among numerous talented students.",
+      "Worked as a backend developer in a 10-member team on the Saylani Tech website.",
+      "Contributed to the ongoing official SMIT website project (not yet launched).",
+      "Gained invaluable experience in web development, teamwork, and collaborative problem-solving.",
     ],
   },
   {
-    title: "Full Stack Development Trainee",
-    company_name: "Sheryians Coding School",
-    icon: sheryians, // Or institute logo
+    title: "Sales Team Incharge",
+    company_name: "R and H Software House, Pakistan",
+    icon: RH,
     iconBg: "#ffff",
-    date: "Aug 2023 - Mar 2025",
+    date: "Nov 2022 - Aug 2024",
     points: [
-      "Completed an intensive training program focused on MERN stack development.",
-      "Built multiple full-stack projects, including CRUD apps and authentication systems.",
-      "Worked with tools like Node.js, Express.js, MongoDB, React.js, and Git.",
-      "Gained hands-on experience in deploying apps and following clean code practices.",
+      "Led the sales team and managed online presence across multiple platforms.",
+      "Handled artwork creation and supervised design tasks for social media campaigns.",
+      "Oversaw Twitter sales activities and boosted client engagement.",
+      "Coordinated marketing activities on Facebook and Discord to grow outreach.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     testimonial:
+//       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+//     name: "Sara Lee",
+//     designation: "CFO",
+//     company: "Acme Co",
+//     image: "https://randomuser.me/api/portraits/women/4.jpg",
+//   },
+//   {
+//     testimonial:
+//       "I've never met a web developer who truly cares about their clients' success like Rick does.",
+//     name: "Chris Brown",
+//     designation: "COO",
+//     company: "DEF Corp",
+//     image: "https://randomuser.me/api/portraits/men/5.jpg",
+//   },
+//   {
+//     testimonial:
+//       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+//     name: "Lisa Wang",
+//     designation: "CTO",
+//     company: "456 Enterprises",
+//     image: "https://randomuser.me/api/portraits/women/6.jpg",
+//   },
+// ];
 
 const projects = [
   {
-    name: "MacBookPro-redesign",
-    description:
-      "A visually engaging website that showcases a redesigned MacBook Pro with smooth animations and a realistic 3D model, offering users an interactive and immersive way to explore the product’s look and features.",
+    name: "Real-Time Chat App",
+    description:     "A modern real-time chat application built with React and AWS, featuring secure authentication, instant messaging, voice notes, and image sharing. The backend leverages AWS Lambda, API Gateway, and DynamoDB for a fully serverless and scalable architecture, while WebSocket integration ensures seamless live communication.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "three.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+    { name: "AWS Lambda", color: "green-text-gradient" },
+    { name: "API Gateway", color: "purple-text-gradient" },
+    { name: "DynamoDB", color: "yellow-text-gradient" },
+    { name: "S3 Bucket", color: "pink-text-gradient" },
+    { name: "WebSocket", color: "orange-text-gradient" },
+
     ],
-    image: macbookpro,
-    source_code_link: "https://github.com/gitswastik08/macbook_landingpage",
-    live_website_link: "https://macbookpro3d.netlify.app/",
+    image: chat,
+    source_code_link: "https://github.com/Husban-Ali/Husban-ChatApp.git",
+    live_website_link: "https://d2j16s8yniu6t1.cloudfront.net/",
   },
   {
-    name: "Falverra Redesign",
-    description:
-      "A sleek and animated website redesign for Falverra, combining a clean layout with smooth transitions to deliver an engaging, modern browsing experience that highlights the brand’s visual identity and message.",
+    name: "Luxe Store – E-commerce Platform",
+    description: "A modern and responsive e-commerce web application designed to deliver a seamless online shopping experience. Built with the MERN stack and deployed on AWS (Free Tier), Luxe Store provides users with a clean UI and secure functionality.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "multi-page",
-        color: "green-text-gradient",
-      },
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "AWS Lambda", color: "green-text-gradient" },
+      { name: "AWS API Gateway", color: "purple-text-gradient" },
+      { name: "AWS DynamoDB", color: "pink-text-gradient" },
+      { name: "AWS S3 Bucket", color: "blue-text-gradient" },
+
     ],
-    image: falverra,
-    source_code_link: "https://github.com/gitswastik08/falverra-redesign",
-    live_website_link: "https://falverra-recode.netlify.app/",
+    image: luxestore,
+    source_code_link: "https://github.com/Husban-Ali/AWS-Ecommerce.git",
+    live_website_link: "https://d2aqprnfyi3s3y.cloudfront.net/",
+  },
+
+  {
+    name: "Saylani TEC",
+    description: "The official website of Saylani Tech Limited, developed during my internship at Saylani Mass IT Training (SMIT). Built using the MERN stack with Tailwind CSS, the platform showcases company services, highlights key initiatives, and provides a modern, responsive, and user-friendly interface.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "mongodb", color: "pink-text-gradient" },
+    ],
+    image: image3,
+    source_code_link: "https://github.com/Husban-Ali/saylani_tech.git",
+    live_website_link: "https://saylanitech.com/",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "SMIT WEBSITE",
+    description: "A dynamic web application developed during my internship at Saylani Mass IT Training (SMIT). Built with the MERN stack, the website features responsive design, structured course sections, student-focused modules, and smooth navigation to deliver a user-friendly experience.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "mongodb", color: "pink-text-gradient" },
     ],
-    image: tripguide,
-    // github link ⬇️
-    source_code_link: "https://github.com/",
-    // project link ⬇️
-    live_website_link: "https://app.netlify.com/teams/gitswastik08/projects",
+    image: image4,
+    source_code_link: "https://github.com/MRsabcod/SMIT-Web.git",
+    live_website_link: "https://smit-web-iota.vercel.app/",
+  },
+  {
+  name: "F&H International - Import Export Website",
+  description:
+    "A professional import-export company website developed with React and MongoDB, designed to showcase services, manage inquiries, and streamline business communication. The platform highlights product portfolios, integrates a dynamic services section, and ensures smooth user experience for clients worldwide.",
+  tags: [
+    { name: "React", color: "blue-text-gradient" },
+    { name: "MongoDB", color: "green-text-gradient" },
+    { name: "Node.js", color: "yellow-text-gradient" },
+    { name: "Express", color: "pink-text-gradient" },
+  ],
+  image: FandH, // yahan apko apna image import karna hoga
+  source_code_link: "https://github.com/Husban-Ali/fh-frontend.git",
+  live_website_link: "https://fh-frontend-steel.vercel.app/",
+},
+  {
+    name: "Blog",
+    description:
+      "A service side blog writing app made using HTML, CSS and Firebase as a database",
+    tags: [
+      { name: "html", color: "blue-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+      { name: "firebase", color: "pink-text-gradient" },
+    ],
+    image: image2,
+    source_code_link: "https://github.com/Husban-Ali/patanh-bs-ban-gyi-.git",
+    live_website_link:
+      "https://husban-ali.github.io/patanh-bs-ban-gyi-/",
+  },
+  {
+    name: "Airport Management System",
+    description:
+      "Flight management system, developed through Java by integrating Java Swing library. It completely works on the concept of Object Oriented Programming.",
+    tags: [
+      { name: "java", color: "blue-text-gradient" },
+      { name: "swing", color: "green-text-gradient" },
+      { name: "oop", color: "pink-text-gradient" },
+    ],
+    image: airport,
+    source_code_link:
+      "https://github.com/HamizMuzaffer/Airport-Management.git",
+    live_website_link:
+      "https://github.com/HamizMuzaffer/Airport-Management.git",
+  },
+  {
+    name: "Stopwatch",
+    description:
+      "A stopwatch with reset and pause feature for user built using vanilla JS",
+    tags: [
+      { name: "javascript", color: "blue-text-gradient" },
+      { name: "html", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+    ],
+    image: stopwatch,
+    source_code_link: "https://github.com/Husban-Ali/stopwatch.gitt",
+    live_website_link: "",
+  },
+  {
+    name: "Calculator",
+    description:
+      "A JavaScript calculator with all arithmetic operations enabled",
+    tags: [
+      { name: "javascript", color: "blue-text-gradient" },
+      { name: "html", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+    ],
+    image: calculator,
+    source_code_link: "https://github.com/Husban-Ali/Calculator.git",
+    live_website_link: "https://husban-ali.github.io/Calculator/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+
+export { services, technologies, experiences,  projects };
