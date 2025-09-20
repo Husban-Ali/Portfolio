@@ -24,24 +24,26 @@ import {
   tripguide,
   threejs,
 } from "../../public/assets";
-import lambda from "../../public/assets/lambda.svg"
-import dynamodb from "../../public/assets/dynamodb.png"
-import CICD from "../../public/assets/CICD.svg"
-import mern from "../../public/assets/mern.png"
-import cloudformation from "../../public/assets/cloudformation.svg"
-import EC2 from "../../public/assets/EC2.svg"
-import image3 from "../../public/assets/image3.png"
-import image4 from "../../public/assets/image4.png"
-import image2 from "../../public/assets/image2.png"
-import airport from "../../public/assets/airport.png"
-import todo from "../../public/assets/react-todo.png"
-import stopwatch from "../../public/assets/stopwatch.png"
-import calculator from "../../public/assets/calculator.png"
-import luxestore from "../../public/assets/luxestore.png"
-import smit from "../../public/assets/smit.png"
-import RH from "../../public/assets/RandH.png"
-import chat from "../../public/assets/Chat.png"
-import FandH from "../../public/assets/FandH.png"
+// Direct path from public folder
+const lambda = "/assets/lambda.svg";
+const dynamodb = "/assets/dynamodb.png";
+const CICD = "/assets/CICD.svg";
+const mern = "/assets/mern.png";
+const cloudformation = "/assets/cloudformation.svg";
+const EC2 = "/assets/EC2.svg";
+const image3 = "/assets/image3.png";
+const image4 = "/assets/image4.png";
+const image2 = "/assets/image2.png";
+const airport = "/assets/airport.png";
+const todo = "/assets/react-todo.png";
+const stopwatch = "/assets/stopwatch.png";
+const calculator = "/assets/calculator.png";
+const luxestore = "/assets/luxestore.png";
+const smit = "/assets/smit.png";
+const RH = "/assets/RandH.png";
+const chat = "/assets/Chat.png";
+const FandH = "/assets/FandH.png";
+
 
 export const navLinks = [
   {

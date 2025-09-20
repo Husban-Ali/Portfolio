@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import {  menu, close } from "../../public/assets";
-import logo from "../../public/assets/logo.png"
+
+const menu =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/menu.png?updatedAt=1750673289882";
+const close =
+  "https://ik.imagekit.io/bqzlidc77g/my%20portfolio/close.png?updatedAt=1750673269591";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -22,19 +25,21 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
+          {/* Logo from public/assets */}
           <img
-            src={`${logo}${logo.includes("?") ? "&" : "?"}tr=f-auto`}
+            src="/assets/logo.png"
             alt="logo"
             loading="lazy"
-            className="w-16 object-contain "
+            className="w-16 object-contain"
             width={64}
             height={64}
           />
           <p className="text-white text-[17px] font-semibold cursor-pointer">
-            <span className="sm:block  font-bold">HUSBAN</span> 
+            <span className="sm:block font-bold">HUSBAN</span>
           </p>
         </Link>
 
+        {/* Desktop nav */}
         <ul className="list-none hidden text-nowrap sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -52,7 +57,7 @@ const Navbar = () => {
         {/* Mobile menu icon */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src={`${(toggle ? close : menu)}${(toggle ? close : menu).includes("?") ? "&" : "?"}tr=f-auto`}
+            src={toggle ? close : menu}
             alt="menu"
             loading="lazy"
             className="w-[28px] object-contain cursor-pointer"
@@ -63,6 +68,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile menu drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#050816] shadow-lg transition-transform duration-300 z-40 ${
           toggle ? "translate-x-0" : "translate-x-full"
@@ -71,7 +77,7 @@ const Navbar = () => {
         <div className="flex flex-col gap-8 p-6">
           <div className="w-full flex items-center justify-end">
             <img
-              src={`${close}${close.includes("?") ? "&" : "?"}tr=f-auto`}
+              src={close}
               alt="close"
               loading="lazy"
               className="w-[24px] h-[24px] object-contain cursor-pointer"
@@ -96,6 +102,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Overlay */}
       {toggle && (
         <div
           onClick={() => setToggle(false)}
