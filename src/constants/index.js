@@ -11,6 +11,8 @@ const CICD = "/assets/CICD.svg";
 const mern = "/assets/mern.png";
 const cloudformation = "/assets/cloudformation.svg";
 const EC2 = "/assets/EC2.svg";
+const optima = "/assets/optima.png";
+const barber = "/assets/barber.png";
 const image3 = "/assets/image3.png";
 const image4 = "/assets/image4.png";
 const image2 = "/assets/image2.png";
@@ -21,6 +23,7 @@ const calculator = "/assets/calculator.png";
 const luxestore = "/assets/luxestore.png";
 const smit = "/assets/smit.png";
 const RH = "/assets/RandH.png";
+const radiant = "/assets/RandH.png"; // Using RandH logo as placeholder for Radiant Solutions
 const chat = "/assets/Chat.png";
 const FandH = "/assets/FandH.png";
 const javascript =
@@ -135,31 +138,45 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Backend Developer Intern",
-    company_name: "SMIT – Saylani Mass And I.T. Training",
-    icon: smit,
-    iconBg: "#0188E3",
-    date: "Sept 2024 - Oct 2024",
-    points: [
-      "Selected for a competitive 2-month internship at SMIT among numerous talented students.",
-      "Worked as a backend developer in a 10-member team on the Saylani Tech website.",
-      "Contributed to the ongoing official SMIT website project (not yet launched).",
-      "Gained invaluable experience in web development, teamwork, and collaborative problem-solving.",
-    ],
-  },
-  {
-    title: "Sales Team Incharge",
-    company_name: "R and H Software House, Pakistan",
-    icon: RH,
-    iconBg: "#ffff",
-    date: "Nov 2022 - Aug 2024",
-    points: [
-      "Led the sales team and managed online presence across multiple platforms.",
-      "Handled artwork creation and supervised design tasks for social media campaigns.",
-      "Oversaw Twitter sales activities and boosted client engagement.",
-      "Coordinated marketing activities on Facebook and Discord to grow outreach.",
-    ],
-  },
+  title: "Full Stack Developer",
+  company_name: "Radiant Solutions",
+  icon: radiant,
+  iconBg: "#E6DEDD",
+  date: "July 2025 - Present",
+  points: [
+    "Developing and maintaining scalable full-stack web applications using React.js, Node.js, Express.js, and MongoDB.",
+    "Designing and implementing RESTful APIs and integrating third-party services to enhance application functionality.",
+    "Building responsive and server-side rendered user interfaces using Next.js and Material UI (MUI).",
+    "Collaborating with cross-functional teams to improve performance, security, and scalability."
+  ],
+},
+{
+  title: "Full Stack Developer",
+  company_name: "R&H Software House",
+  icon: RH,
+  iconBg: "#FFFFFF",
+  date: "Nov 2024 - July 2025",
+  points: [
+    "Developed and maintained production-level web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+    "Optimized backend logic and database queries to improve application performance and response time.",
+    "Implemented clean, reusable, and maintainable code following industry best practices.",
+    "Worked closely with designers and developers to deliver user-friendly and efficient solutions."
+  ],
+},
+{
+  title: "Backend Developer Intern",
+  company_name: "Saylani Tech (SMIT)",
+  icon: smit,
+  iconBg: "#0188E3",
+  date: "Sept 2024 - Oct 2024",
+  points: [
+    "Selected for a competitive 2-month Backend Developer Internship at SMIT, working within a 10-member development team.",
+    "Contributed to backend architecture, database design, and REST API development.",
+    "Worked on server-side logic, API integration, debugging, and performance improvements.",
+    "Gained hands-on experience in professional backend development and collaborative problem-solving."
+  ],
+},
+
 ];
 
 // const testimonials = [
@@ -190,6 +207,39 @@ const experiences = [
 // ];
 
 const projects = [
+  {
+    name: "Stack Collaboration & Management System",
+    description: "A centralized platform designed to streamline internal communication, task management, project collaboration, and organizing team communications within Radiant Solutions RS (Pvt) Ltd. The system enhances team productivity by integrating Slack channels, managing project updates, and efficiently managing resources across departments.",
+    tags: [
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Node.js", color: "green-text-gradient" },
+      { name: "Express.js", color: "yellow-text-gradient" },
+      { name: "MongoDB", color: "pink-text-gradient" },
+      { name: "Slack API", color: "purple-text-gradient" },
+      { name: "Tailwind CSS", color: "blue-text-gradient" },
+      { name: "JWT", color: "orange-text-gradient" },
+      { name: "Axios", color: "green-text-gradient" },
+    ],
+    image: optima,
+    source_code_link: "https://github.com/Husban-Ali/",
+    live_website_link: "https://management-frontend-ebon.vercel.app/login",
+  },
+  {
+    name: "Barber Shop - Full Service Platform",
+    description: "A comprehensive barber shop management platform featuring online appointment booking, payment integration, product marketplace, and customer management. Built with the MERN stack, it streamlines salon operations with real-time scheduling, secure payment processing, inventory management, and seamless customer experience.",
+    tags: [
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Node.js", color: "green-text-gradient" },
+      { name: "Express.js", color: "yellow-text-gradient" },
+      { name: "MongoDB", color: "pink-text-gradient" },
+      { name: "Payment Gateway", color: "purple-text-gradient" },
+      { name: "Booking System", color: "orange-text-gradient" },
+      { name: "E-commerce", color: "blue-text-gradient" },
+    ],
+    image: barber,
+    source_code_link: "https://github.com/Husban-Ali/",
+    live_website_link: "https://barber-frontend-eight.vercel.app/",
+  },
   {
     name: "Real-Time Chat App",
     description:     "A modern real-time chat application built with React and AWS, featuring secure authentication, instant messaging, voice notes, and image sharing. The backend leverages AWS Lambda, API Gateway, and DynamoDB for a fully serverless and scalable architecture, while WebSocket integration ensures seamless live communication.",
@@ -288,32 +338,32 @@ const projects = [
     live_website_link:
       "https://github.com/HamizMuzaffer/Airport-Management.git",
   },
-  {
-    name: "Stopwatch",
-    description:
-      "A stopwatch with reset and pause feature for user built using vanilla JS",
-    tags: [
-      { name: "javascript", color: "blue-text-gradient" },
-      { name: "html", color: "green-text-gradient" },
-      { name: "css", color: "pink-text-gradient" },
-    ],
-    image: stopwatch,
-    source_code_link: "https://github.com/Husban-Ali/stopwatch.git",
-    live_website_link: "",
-  },
-  {
-    name: "Calculator",
-    description:
-      "A JavaScript calculator with all arithmetic operations enabled",
-    tags: [
-      { name: "javascript", color: "blue-text-gradient" },
-      { name: "html", color: "green-text-gradient" },
-      { name: "css", color: "pink-text-gradient" },
-    ],
-    image: calculator,
-    source_code_link: "https://github.com/Husban-Ali/Calculator.git",
-    live_website_link: "https://husban-ali.github.io/Calculator/",
-  },
+  // {
+  //   name: "Stopwatch",
+  //   description:
+  //     "A stopwatch with reset and pause feature for user built using vanilla JS",
+  //   tags: [
+  //     { name: "javascript", color: "blue-text-gradient" },
+  //     { name: "html", color: "green-text-gradient" },
+  //     { name: "css", color: "pink-text-gradient" },
+  //   ],
+  //   image: stopwatch,
+  //   source_code_link: "https://github.com/Husban-Ali/stopwatch.git",
+  //   live_website_link: "",
+  // },
+  // {
+  //   name: "Calculator",
+  //   description:
+  //     "A JavaScript calculator with all arithmetic operations enabled",
+  //   tags: [
+  //     { name: "javascript", color: "blue-text-gradient" },
+  //     { name: "html", color: "green-text-gradient" },
+  //     { name: "css", color: "pink-text-gradient" },
+  //   ],
+  //   image: calculator,
+  //   source_code_link: "https://github.com/Husban-Ali/Calculator.git",
+  //   live_website_link: "https://husban-ali.github.io/Calculator/",
+  // },
 ];
 
 

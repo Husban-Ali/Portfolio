@@ -46,33 +46,34 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-gray-300 text-[14px] sm:text-[17px] max-w-3xl sm:leading-[30px] leading-1"
       >
-        Hi, I’m <span className="text-[#FF9900] font-semibold">Husban Ali</span> — 
-        an <span className="text-[#FF9900]">AWS Associate Developer</span> and 
-        <span className="text-[#FF9900]"> MERN Stack Engineer</span>.  
+        Hi, I'm <span className="text-[#FF9900] font-semibold">Husban Ali</span> — 
+        an <span className="text-[#FF9900]">AWS Certified Full Stack Developer</span> with hands-on experience in designing and developing scalable web applications using{" "}
+        <span className="text-[#FF9900]">React.js</span>,{" "}
+        <span className="text-[#FF9900]">Next.js</span>,{" "}
+        <span className="text-[#FF9900]">Express.js</span>,{" "}
+        <span className="text-[#FF9900]">MongoDB</span>, and{" "}
+        <span className="text-[#FF9900]">AWS services</span>. I'm experienced in building{" "}
+        <span className="text-[#FF9900]">cloud-native</span> and{" "}
+        <span className="text-[#FF9900]">serverless solutions</span>, integrating front-end and back-end systems to deliver secure, high-performance applications.
+        <br /><br />
         I work extensively with AWS services like{" "}
         <span className="text-[#FF9900]">Lambda</span>,{" "}
         <span className="text-[#FF9900]">API Gateway</span>,{" "}
         <span className="text-[#FF9900]">DynamoDB</span>,{" "}
         <span className="text-[#FF9900]">S3</span>,{" "}
-        <span className="text-[#FF9900]">CloudFormation</span>, and{" "}
-        <span className="text-[#FF9900]">IAM</span> to build secure and scalable cloud-native applications.  
-        On the development side, I leverage{" "}
-        <span className="text-[#FF9900]">React.js</span>,{" "}
-        <span className="text-[#FF9900]">Node.js</span>,{" "}
-        <span className="text-[#FF9900]">Express</span>, and{" "}
-        <span className="text-[#FF9900]">MongoDB</span> to design and deliver modern full-stack web applications.  
-        I also implement{" "}
+        <span className="text-[#FF9900]">CloudFormation</span>, and implement{" "}
         <span className="text-[#FF9900]">CI/CD pipelines</span> using{" "}
         <span className="text-[#FF9900]">AWS CodePipeline</span>,{" "}
-        <span className="text-[#FF9900]">CodeBuild</span>,{" "}
-        <span className="text-[#FF9900]">CodeDeploy</span>, and{" "}
-        <span className="text-[#FF9900]">GitHub Actions</span>, ensuring smooth 
-        and automated deployments.  
-        My focus is on combining{" "}
-        <span className="text-[#FF9900]">serverless cloud infrastructure</span>,{" "}
-        <span className="text-[#FF9900]">DevOps practices</span>, and{" "}
-        <span className="text-[#FF9900]">full-stack engineering</span> to deliver 
-        reliable, secure, and high-performance solutions.
+        <span className="text-[#FF9900]">CodeBuild</span>, and{" "}
+        <span className="text-[#FF9900]">GitHub Actions</span>. Experienced in integrating front-end and back-end systems to deliver secure, high-performance applications.
+        <br /><br />
+        <span className="text-[#FF9900] font-semibold">Certifications:</span>
+        <br />
+        • AWS Developer Associate (Udemy, Aug 2025)
+        <br />
+        • Cloud Practitioner - AWS (July 2025)
+        <br />
+        • Full Stack Development – Saylani Mass IT Training Program (June 2024)
       </motion.p>
 
       {/* Services Cards */}
